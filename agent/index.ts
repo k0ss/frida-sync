@@ -1,6 +1,11 @@
-import { log } from "./logger";
+//import { log } from "./logger";
+import { Sync } from "./sync";
 
-const header = Memory.alloc(16);
+let synctool = new Sync("127.0.0.1");
+//synctool.invoke(Module.getBaseAddress("arma3server_x64.exe"));
+
+
+/*const header = Memory.alloc(16);
 header
     .writeU32(0xdeadbeef).add(4)
     .writeU32(0xd00ff00d).add(4)
@@ -20,3 +25,4 @@ Interceptor.attach(Module.getExportByName(null, "open"), {
         log(`open() path="${path}"`);
     }
 });
+*/
